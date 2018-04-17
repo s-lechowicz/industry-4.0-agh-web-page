@@ -20,15 +20,20 @@ footer {
     line-height: 60px;
 }
 
+.container-fluid {
+    padding: 25px;
+}
+
 header {
-    background-color: #000;
+    background: rgba(0,0,0,0.7);
     height: 380px;
     color: #FFFFFF;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .panel {
-    padding-top: 25px;
+    padding-top: 5px;
+    padding-bottom: 25px;
 }
 
 .panel-content {
