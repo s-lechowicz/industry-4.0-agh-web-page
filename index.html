@@ -7,11 +7,13 @@
     <meta name="author" content="Sebastian Lechowicz - s-lechowicz@outlook.com">
     <title>Home - Industry 4.0</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet"/>
 
 </head>
 <body class="text-center">
+
+<h1 id="home-title">Industry 4.0</h1>
 
 <form class="form">
     <h1 class="h3 mb-3 font-weight-normal">Select option:</h1>
@@ -21,9 +23,14 @@
         <option value="3">Option 3</option>
     </select>
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit-button">Submit</button>
+    <p id="status-field"><strong>Status: </strong><span id="status">Available</span></p>
+
     <p class="mt-5 mb-3 text-muted">&copy; 2018</p>
 </form>
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
