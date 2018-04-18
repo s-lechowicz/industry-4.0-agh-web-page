@@ -7,42 +7,51 @@
     <meta name="author" content="Sebastian Lechowicz - s-lechowicz@outlook.com">
     <title>Home - Industry 4.0</title>
 
+    <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link href="css/main.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/fontello.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
 
 </head>
 <body>
 <header class="text-center">
-    <h1 class="display-1 text-center title">Industry 4.0</h1>
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div>
-                    <h4>Modern Tool</h4>
-                    <p>Control whole production line via one application!</p>
+    <div class="header-small">
+        <nav class="header-small navbar-dark fixed-top d-md-none d-lg-none">
+            <a class="navbar-brand title title-bar" href="/">Industry 4.0</a>
+        </nav>
+    </div>
+    <div class="header-big d-none d-sm-none d-md-block">
+        <h1 class="display-1 title title-big fixed-top">Industry 4.0</h1>
+        <div id="carouselOfQuotes" class="carousel slide " data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div>
+                        <h4>Modern Tool</h4>
+                        <p>Control whole production line from web application!</p>
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div>
-                    <h4>Responsive</h4>
-                    <p>Set up product on your computer, tablet or smartphone!</p>
+                <div class="carousel-item">
+                    <div>
+                        <h4>Responsive</h4>
+                        <p>Set up product on your computer, tablet or even smartphone!</p>
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div>
-                    <h5>"It should be so good that the minister himself will gather his jaw from the floor."</h5>
-                    <p><span><img src="img/lalik_k.png" class="img-thumbnail"/></span> ~ Krzysztof Lalik Ph.D.</p>
+                <div class="carousel-item">
+                    <div>
+                        <h5>"It should be so good that the minister himself will gather his jaw from the floor."</h5>
+                        <p><span><img src="img/lalik_k.png" class="img-thumbnail"/></span> ~ Krzysztof Lalik Ph.D.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </header>
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-        <div class="col-12 col-md-8 panel">
+        <div class="col-xs-12 col-md-8 panel">
             <div class="panel-content">
-                <h3 class="mb-3 font-weight-normal panel-header">Select product:</h3>
+                <h3 class="mb-3 font-weight-normal panel-header"><span class="icon icon-truck"></span>Order product</h3>
                 <form method="post">
                     <div class="form-group">
                         <label for="nameInput">Name</label>
@@ -66,9 +75,9 @@
                 </form>
             </div>
         </div>
-        <div class="col-12 col-md-4 panel">
+        <div class="col-xs-12 col-md-4 panel">
             <div class="panel-content">
-                <h3 class="mb-3 font-weight-normal panel-header">System info:</h3>
+                <h3 class="mb-3 font-weight-normal panel-header"><span class="icon icon-cog-alt"></span>System</h3>
                 <p class="info-field"><strong>Status: </strong><span id="status">Available</span></p>
                 <p class="info-field"><strong>Current product: </strong><span id="item">-</span></p>
                 <p class="info-field"><strong>Ordered by: </strong><span id="customer">Jan Nowak</span></p>
@@ -85,8 +94,8 @@
 </div>
 <footer class="text-center">
     <span class="mt-5 mb-3 text-muted">
-        &copy; 2018 <strong>Industry 4.0</strong> | Designed by <a href="https://github.com/s-lechowicz"
-                                                                   target="_blank">Sebastian Lechowicz</a>
+        &copy; 2018 <strong>Industry 4.0</strong> <span>| Created by<a href="https://github.com/s-lechowicz"
+                                                                   target="_blank"><span class="icon icon-github-circled"></span>s-lechowicz</a>
     </span>
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

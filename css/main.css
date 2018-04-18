@@ -12,6 +12,13 @@ body {
     background: url("../img/pinstripe.png");
 }
 
+a {
+    color: inherit;
+}
+a:hover {
+    text-decoration: none;
+}
+
 footer {
     position: absolute;
     bottom: 0;
@@ -20,15 +27,31 @@ footer {
     line-height: 60px;
 }
 
-.container-fluid {
+.container {
     padding: 25px;
 }
 
 header {
     background: rgba(0,0,0,0.7);
-    height: 380px;
     color: #FFFFFF;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.icon {
+    padding-right: 10px;
+}
+
+.icon-github-circled {
+    padding-right: 0px;
+    color: #6e5494;
+}
+
+.header-big {
+     height: 230px;
+ }
+
+.header-small {
+    height: 105px;
 }
 
 .panel {
@@ -43,9 +66,20 @@ header {
 }
 
 .title {
-    height: 205px;
-    padding-top: 40px;
     font-family: 'Gloria Hallelujah', cursive;
+}
+
+.title-big {
+    padding-top: 20px;
+}
+
+#carouselOfQuotes {
+    padding-top: 80px;
+}
+
+.title-bar {
+    font-size: 50px;
+    padding-top: 10px;
 }
 
 .info-field {
