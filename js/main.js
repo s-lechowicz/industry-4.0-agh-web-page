@@ -29,6 +29,8 @@ var pageByTagIdPostMap = new Map();
 pageByTagIdOutputMap.set("status", "IO/IO_isBusy.html");
 
 // Form Post Map
+pageByTagIdPostMap.set("nameInput", "IO/IO_user.name.html");
+pageByTagIdPostMap.set("surnameInput", "IO/IO_user.surname.html");
 pageByTagIdPostMap.set("selectedItem", "IO/IO_item.html");
 
 $(document).ready(function () {
@@ -54,7 +56,7 @@ $("#submit-button").click(function () {
 
 function postIO(id, page) {
     var name = '"webdata".' + page.substring(4, page.length - 5);
-    val = $('input[id=' + id + ']').val();
+    val = $('#' + id).val();
     sdata = escape(name) + '=' + val;
     $.post(page, sdata, function (result) {
     });
