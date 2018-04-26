@@ -27,6 +27,7 @@ var pageByTagIdPostMap = new Map();
 
 // Output Map
 pageByTagIdOutputMap.set("status", "IO/IO_isBusy.html");
+pageByTagIdOutputMap.set("customerItem", "IO/IO_item.html");
 
 // Form Post Map
 pageByTagIdPostMap.set("nameInput", "IO/IO_user.name.html");
