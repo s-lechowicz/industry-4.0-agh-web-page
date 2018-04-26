@@ -16,10 +16,9 @@ h1 {
     font-weight: bold;
 }
 
-
 .navbar {
     font-family: 'Gloria Hallelujah', cursive;
-    transition:all 0.5s ease;
+    transition: all 0.5s ease;
     z-index: 10;
 }
 
@@ -29,7 +28,7 @@ h1 {
     margin-right: auto;
     padding-top: 25px;
     font-size: 90px;
-    transition:all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .navbar-brand.shrink {
