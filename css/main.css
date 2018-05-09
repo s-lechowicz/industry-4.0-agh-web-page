@@ -111,3 +111,17 @@ header {
 .info-field {
     padding-left: 10px;
 }
+
+/****** SELECT OPTION AS PICTURE ******/
+
+label > input{ /* HIDE RADIO */
+    visibility: hidden;
+    position: absolute;
+}
+label > input + img{ /* IMAGE STYLES */
+    cursor:pointer;
+    border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+    border:2px solid #f00;
+}

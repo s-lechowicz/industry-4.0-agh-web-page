@@ -22,23 +22,13 @@ $(document).ready(function () {
     });
 });
 
-var pageByTagIdOutputMap = new Map();
-var pageByTagIdPostMap = new Map();
 
-// Output Map
-pageByTagIdOutputMap.set("status", "IO/IO_isBusy.html");
-pageByTagIdOutputMap.set("customerItem", "IO/IO_item.html");
-
-// Form Post Map
-pageByTagIdPostMap.set("nameInput", "IO/IO_user.name.html");
-pageByTagIdPostMap.set("surnameInput", "IO/IO_user.surname.html");
-pageByTagIdPostMap.set("selectedItem", "IO/IO_item.html");
 
 $(document).ready(function () {
     $.ajaxSetup({cache: false});
     setInterval(function () {
         for (var [tag, page] of pageByTagIdOutputMap) {
-            getIO(tag, page)
+            getIO(tag, page);
         }
     }, 1000);
 });
@@ -51,8 +41,9 @@ function getIO(id, page) {
 
 $("#submit-button").click(function () {
     for (var [tag, page] of pageByTagIdPostMap) {
-        postIO(tag, page)
+        postIO(tag, page);
     }
+    postIORadio("itemSelector", itemSelectorPage);
 });
 
 function postIO(id, page) {
@@ -61,4 +52,20 @@ function postIO(id, page) {
     sdata = escape(name) + '=' + val;
     $.post(page, sdata, function (result) {
     });
+}
+
+function postIORadio(radioName, page) {
+    var name = '"webdata".' + page.substring(4, page.length - 5);
+    var radios = document.getElementsByName(radioName);
+
+    for (var i = 0, length = radios.length; i < length; i++)
+    {
+        if (radios[i].checked)
+        {
+            sdata = escape(name) + '=' + radios[i].value;
+            $.post(page, sdata, function (result) {
+            });
+            break;
+        }
+    }
 }
