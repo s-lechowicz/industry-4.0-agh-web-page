@@ -9,7 +9,8 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     margin-bottom: 60px;
-    background: url("../img/pinstripe.png");
+    /*background: url("../img/pinstripe.png");*/
+    background: url("https://s-lechowicz.github.io/industry-4.0-agh-web-page/img/pinstripe.png");
 }
 
 h1 {
@@ -34,6 +35,10 @@ h1 {
 .navbar-brand.shrink {
     padding-top: 0px;
     font-size: 25px;
+}
+
+.navbar-brand.shrink-v {
+    font-size: 12vw;
 }
 
 a {
@@ -62,7 +67,8 @@ header {
     height: 550px;
     top: 0;
     width: 100%;
-    background: url("../img/back.jpg") no-repeat center center;
+    /*background: url("../img/back.jpg") no-repeat center center;*/
+    background: url("https://s-lechowicz.github.io/industry-4.0-agh-web-page/img/back.jpg") no-repeat center center;
     background-size: cover;
     color: #FFFFFF;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -114,14 +120,17 @@ header {
 
 /****** SELECT OPTION AS PICTURE ******/
 
-label > input{ /* HIDE RADIO */
+label > input { /* HIDE RADIO */
     visibility: hidden;
     position: absolute;
 }
-label > input + img{ /* IMAGE STYLES */
-    cursor:pointer;
-    border:2px solid transparent;
+
+label > input + img { /* IMAGE STYLES */
+    cursor: pointer;
+    border: 2px solid transparent;
 }
-label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
-    border:2px solid #f00;
+
+label > input:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
+    /*border:2px solid #f00;*/
+    background-color: #00bfff;
 }

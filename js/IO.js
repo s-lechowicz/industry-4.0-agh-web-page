@@ -1,5 +1,4 @@
 var pageByTagIdOutputMap = new Map();
-var pageByTagIdPostMap = new Map();
 
 // Output Map
 pageByTagIdOutputMap.set("status", "IO/IO_isBusy.html");
@@ -14,9 +13,3 @@ pageByTagIdOutputMap.set("st50_msg", "IO/IO_ST50.msg.html");
 pageByTagIdOutputMap.set("st60_msg", "IO/IO_ST60.msg.html");
 pageByTagIdOutputMap.set("st70_msg", "IO/IO_ST70.msg.html");
 pageByTagIdOutputMap.set("st80_msg", "IO/IO_ST80.msg.html");
-
-// Form Post Map
-pageByTagIdPostMap.set("nameInput", "IO/IO_user.name.html");
-pageByTagIdPostMap.set("surnameInput", "IO/IO_user.surname.html");
-
-var itemSelectorPage = "IO/IO_item.html";

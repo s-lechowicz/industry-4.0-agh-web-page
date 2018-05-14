@@ -1,7 +1,7 @@
 <!-- AWP_In_Variable Name='"webdata".user.name' -->
 <!-- AWP_In_Variable Name='"webdata".user.surname' -->
 <!-- AWP_In_Variable Name='"webdata".item' -->
-
+<!-- AWP_In_Variable Name='"webdata".isBusy' -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,9 @@
     <meta name="author" content="Sebastian Lechowicz - s-lechowicz@outlook.com">
     <title>Home - Industry 4.0</title>
 
-    <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico'/>
+    <!--<link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico'/>-->
+    <link rel='shortcut icon' type='image/x-icon'
+          href='https://s-lechowicz.github.io/industry-4.0-agh-web-page/img/favicon.ico'/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="css/fontello.css"/>
@@ -41,12 +43,15 @@
             </div>
             <div class="carousel-item">
                 <div>
-                    <h1>"It should be so good that the minister himself will gather his jaw from the floor."</h1>
-                    <p><span><img src="img/lalik_k.png" class="img-thumbnail"/></span> ~ Krzysztof Lalik Ph.D.</p>
+                    <h2>"It should be so good that the minister himself will gather his jaw from the floor."</h2>
+                    <p><span>
+                        <!--<img src="img/lalik_k.png" class="img-thumbnail"/>-->
+                        <img src="https://s-lechowicz.github.io/industry-4.0-agh-web-page/img/lalik_k.png"
+                             class="img-thumbnail"/>
+                    </span> ~ Krzysztof Lalik Ph.D.</p>
                 </div>
             </div>
         </div>
-
     </div>
 </header>
 
@@ -58,11 +63,13 @@
                 <form method="post">
                     <div class="form-group">
                         <label for="nameInput">Name</label>
-                        <input type="text" class="form-control" id="nameInput" placeholder="Your name" required/>
+                        <input name='"webdata".user.name' type="text" class="form-control" id="nameInput"
+                               placeholder="Your name" required/>
                     </div>
                     <div class="form-group">
                         <label for="surnameInput">Surname</label>
-                        <input type="text" class="form-control" id="surnameInput" placeholder="Your surname"
+                        <input name='"webdata".user.surname' type="text" class="form-control" id="surnameInput"
+                               placeholder="Your surname"
                                required/>
                     </div>
                     <div class="form-group">
@@ -70,21 +77,29 @@
 
                         <div class="text-center">
                             <label>
-                                <input type="radio" name="itemSelector" value="1"/>
-                                <img src="img/opt1.jpg">
+                                <input type="radio" name='"webdata".item' value="1"/>
+                                <!--<img class="img-fluid img-thumbnail" src="img/opt1.jpg">-->
+                                <img class="img-fluid img-thumbnail"
+                                     src="https://s-lechowicz.github.io/industry-4.0-agh-web-page/img/opt1.jpg">
                             </label>
 
                             <label>
-                                <input type="radio" name="itemSelector" value="2"/>
-                                <img src="img/opt2.jpg">
+                                <input type="radio" name='"webdata".item' value="2"/>
+                                <!--<img class="img-fluid img-thumbnail" src="img/opt2.jpg">-->
+                                <img class="img-fluid img-thumbnail"
+                                     src="https://s-lechowicz.github.io/industry-4.0-agh-web-page/img/opt2.jpg">
                             </label>
 
                             <label>
-                                <input type="radio" name="itemSelector" value="3"/>
-                                <img src="img/opt3.jpg">
+                                <input type="radio" name='"webdata".item' value="3"/>
+                                <!--<img class="img-fluid img-thumbnail" src="img/opt3.jpg">-->
+                                <img class="img-fluid img-thumbnail"
+                                     src="https://s-lechowicz.github.io/industry-4.0-agh-web-page/img/opt3.jpg">
                             </label>
                         </div>
                     </div>
+
+                    <input type="hidden" name='"webdata".isBusy' value="1">
 
                     <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit-button">Submit
                     </button>
@@ -99,57 +114,51 @@
                 <p class="info-field"><strong>Ordered by: </strong>
                     <span id="customerName"></span>&nbsp;
                     <span id="customerSurname"></span></p>
-                <!--TODO: Progress calculation in JS based on ST_XX statuses. Write logic, read inputs from PLC.-->
-                <!--<p class="info-field"><strong>Progress: </strong></p>-->
-                <!--<div class="progress">-->
-                    <!--<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"-->
-                         <!--aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75%-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<br/>-->
                 <h4>Detail info:</h4>
-                <table class="table table-sm table-light table-striped table-bordered">
-                    <thead>
-                    <tr>
-                        <th scope="col">Station</th>
-                        <th scope="col">Status</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">ST10</th>
-                        <td><span id="st10_msg"></span></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">ST20</th>
-                        <td><span id="st20_msg"></span></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">ST30</th>
-                        <td><span id="st30_msg"></span></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">ST40</th>
-                        <td><span id="st40_msg"></span></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">ST50</th>
-                        <td><span id="st50_msg"></span></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">ST60</th>
-                        <td><span id="st60_msg"></span></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">ST70</th>
-                        <td><span id="st70_msg"></span></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">ST80</th>
-                        <td><span id="st80_msg"></span></td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-sm table-light table-striped table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">Station</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">ST10</th>
+                            <td><span id="st10_msg"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ST20</th>
+                            <td><span id="st20_msg"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ST30</th>
+                            <td><span id="st30_msg"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ST40</th>
+                            <td><span id="st40_msg"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ST50</th>
+                            <td><span id="st50_msg"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ST60</th>
+                            <td><span id="st60_msg"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ST70</th>
+                            <td><span id="st70_msg"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ST80</th>
+                            <td><span id="st80_msg"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
